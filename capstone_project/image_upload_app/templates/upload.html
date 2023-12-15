@@ -1,0 +1,36 @@
+{% extends "master.html" %}
+
+{% block content %}
+<div class="container">
+    <h4>UPLOAD IMAGE</h4>
+    <form action="" method="POST" class="form" enctype="multipart/form-data"> {% csrf_token %}
+        <div class="input-items">
+            <label for="referencecode">Reference Number</label>
+            <input type="text" placeholder="" name="referencecode" value="{{ referencecode }}" readonly>
+        </div>
+        {% comment %} <div class="input-items">
+            <label for="firstname">Firstname</label>
+            <input type="text" placeholder="Enter your firstname" name="firstname" required>
+        </div>
+        <div class="input-items">
+            <label for="lastname">Lastname</label>
+            <input type="text" placeholder="Enter your lastname" name="lastname" required>
+        </div>
+        <div class="input-items">
+            <label for="emailaddress">Email Address</label>
+            <input type="email" placeholder="Enter your email address" name="emailaddress">
+        </div> {% endcomment %}
+        <div class="input-items">
+            <label for="imagedropzone">Upload your file</label>            
+        </div>    
+        <input name="imagedropzone" id="imagedropzone" type="file" multiple class="fileupload" accept=".jpeg, .jpg, .png" >
+        <div class="input-items">
+            <div class="container-buttons">
+                {% comment %} <button type="submit" class="button-clear">Clear</button> {% endcomment %}
+                <button type="submit" class="button-submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

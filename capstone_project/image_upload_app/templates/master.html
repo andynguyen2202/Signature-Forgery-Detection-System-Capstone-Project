@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Project</title>
+
+    <link rel="stylesheet" href="{% static 'css/master.css' %}">
+
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <a href="#" class="project-name">SIGNATURE FORGERY DETECTION SYSTEM</a>
+        <ul class="navigation-list">
+            <li><a href={% url "home" %}>Home</a></li>
+            <li><a href={% url "verify" %}>Verify</a></li>
+            <li><a href={% url "upload" %}>Upload</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="master-container">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+</body>
+</html>    

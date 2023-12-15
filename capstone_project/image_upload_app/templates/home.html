@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Project</title>
+    
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Karla:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>   
+        <section class="homepage">
+            <div class="homepage-text">
+                <h3>Group 1</h3>
+                <h1>SIGNATURE FORGERY DETECTION</h1>
+                <p>Authenticate and validate both handwritten and electronic</br> 
+                    signatures for ensuring the authenticity and integrity of</br> 
+                    documents and transactions
+                </p>
+                <a href={% url "upload" %} class="homepage-btn-upload"><i class="ri-upload-2-fill"></i>UPLOAD SIGNATURE</a>
+            </div>   
+
+            <div class="homepage-image">
+                <img src="{% static 'image/homepage-image.png' %}" 
+                height="380px" width="500px"/>
+            </div>    
+        </section> 
+    </main>
+</body>
+</html>  
+

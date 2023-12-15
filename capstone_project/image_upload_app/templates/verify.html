@@ -1,0 +1,30 @@
+{% extends "master.html" %}
+
+{% block content %}
+  <div class="container">
+    <h4>Verify Signature</h4>
+    <form method="POST" action="{% url 'verify' %}" class="form" enctype="multipart/form-data"> {% csrf_token %}      
+      <input name="imagedropzone" id="imagedropzone" type="file" class="fileupload" accept=".jpeg, .jpg, .png" >
+      <div class="input-items">
+        <div class="container-buttons">
+          <button type="submit" class="button-submit">Verify Signature</button>
+        </div>
+      </div>
+    </form>
+    </br>
+    <div>
+      <p>
+        <label id="labelSignatureStatus"></label>
+      </p>
+    </div>
+    <div id="imageContainer">
+      <!-- Images will be displayed here -->
+      {% for image in images %}
+        <img src="/{{image}}" style="max-width: 500px;">
+      {% endfor %}
+    </div>
+    <div>
+      <p>{{ result_text }}</p>
+    </div>  
+  </div>
+{% endblock %}
